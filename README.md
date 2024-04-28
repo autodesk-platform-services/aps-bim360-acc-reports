@@ -16,9 +16,8 @@
 
 This sample application demonstrates how to extract models properties of Autodesk360/BIM360/Autodesk Construction Cloud (ACC) and generate a project dashboard. Also shows a nested view with 2d views of the model (if available).
 
-   <p align="center"><img src="/project_icon.png" width="200" ></p> 
 
-This sample is based on the Learn [APS tutorials](https://tutorials.autodesk.io/tutorials/hubs-browser/) in the section *Hubs Browser* and *Dashboard*. The original implementation was based on [Jim Awe - LMVNavTest](https://github.com/JimAwe/LmvNavTest) (Depracated).
+This sample is based on the [APS tutorials](https://tutorials.autodesk.io/tutorials/hubs-browser/) in the section *Hubs Browser* and *Dashboard*. The original implementation was based on [Jim Awe - LMVNavTest](https://github.com/JimAwe/LmvNavTest) (Deprecated).
 
 ## Live version
 
