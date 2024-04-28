@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAuthorizationUrl, authCallbackMiddleware, authRefreshMiddleware, getUserProfile } = require('../services/aps.js');
+const { getAuthorizationUrl, authCallbackMiddleware, authRefreshMiddleware, getUserProfile, getClientId } = require('../services/aps.js');
 
 let router = express.Router();
 
@@ -27,6 +27,11 @@ router.get('/api/auth/profile', authRefreshMiddleware, async function (req, res,
     } catch (err) {
         next(err);
     }
+});
+
+router.get('/api/clientId', (req, res) => {
+    let clientid = getClientId();
+    res.json({ clientId: clientid});
 });
 
 module.exports = router;

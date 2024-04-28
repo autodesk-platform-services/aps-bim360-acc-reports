@@ -29,7 +29,7 @@ This sample is based on the Learn [APS tutorials](https://tutorials.autodesk.io/
 
 ## Prerequisites
 
-1. **BIM 360 or ACC Account**: must be Account Admin to add the app integration. [Learn about provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps).
+1. **BIM 360 or ACC Account**: must be Account Admin to add the app integration. [Learn about provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products).
 2. **APS Account**: Learn how to create a APS Account, activate subscription and create an app at [this tutorial](https://tutorials.autodesk.io/#create-an-account). 
 3. **Visual Code** or any other text-based tool.
 4. **JavaScript** basic knowledge with **jQuery**.
@@ -48,17 +48,17 @@ To run it, install the required packages, set the enviroment variables with your
 Mac OSX/Linux (Terminal)
 
     npm install
-    export APS_CLIENT_ID=<<YOUR CLIENT ID FROM FORGE DEVELOPER PORTAL>>
-    export APS_CLIENT_SECRET=<<YOUR FORGE CLIENT SECRET>>
-    export APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM FORGE DEVELOPER PORTAL>>
+    export APS_CLIENT_ID=<<YOUR CLIENT ID FROM APS DEVELOPER PORTAL>>
+    export APS_CLIENT_SECRET=<<YOUR APS CLIENT SECRET>>
+    export APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM APS DEVELOPER PORTAL>>
     npm run dev
 
 Windows (use <b>Node.js command line</b> from Start menu)
 
     npm install
-    set APS_CLIENT_ID=<<YOUR CLIENT ID FROM FORGE DEVELOPER PORTAL>>
-    set APS_CLIENT_SECRET=<<YOUR FORGE CLIENT SECRET>>
-    set APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM FORGE DEVELOPER PORTAL>>
+    set APS_CLIENT_ID=<<YOUR CLIENT ID FROM APS DEVELOPER PORTAL>>
+    set APS_CLIENT_SECRET=<<YOUR APS CLIENT SECRET>>
+    set APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM APS DEVELOPER PORTAL>>
     npm run dev
 
 Open the browser: [http://localhost:3000](http://localhost:3000).
@@ -86,7 +86,7 @@ Which executes **nodemon ./start.js**.  The flag option **--ignore www/** indica
 
 Documentation:
 
-- [BIM 360 or ACC API Provisioning](https://aps.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
+- [BIM 360 or ACC API Provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products)
 - [Data Management API](https://developer.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://developer.autodesk.com/en/docs/viewer/v7)
 
@@ -103,7 +103,7 @@ Blogs:
 
 ## Troubleshooting
 
-1. **Cannot see my BIM 360 or ACC projects**: Make sure to provision the Forge App Client ID within the BIM 360 or ACC Account, [learn more here](https://aps.autodesk.com/blog/bim-360-docs-provisioning-forge-apps). This requires the Account Admin permission.
+1. **Cannot see my BIM 360 or ACC projects**: Make sure to provision the APS App Client ID within the BIM 360 or ACC Account, [learn more here](https://tutorials.autodesk.io/#provision-access-in-other-products). This requires the Account Admin permission.
 
 2. **Cannot load Autodesk360 model**: In Autodesk360, the model is not translated by default until the end user loads the model one time in Autodesk360, or the developer posts job to translate. 
 
