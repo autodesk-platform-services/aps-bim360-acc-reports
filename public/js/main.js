@@ -29,3 +29,13 @@ try {
     alert('Could not initialize the application. See console for more details.');
     console.error(err);
 }
+
+jQuery.ajax({
+    url: '/api/clientId',
+    success: function (res) {
+      $('#clientId').val(res.clientId);
+      $("#provisionAccountSave").click(function () {
+        $('#provisionAccountModal').modal('toggle');
+      });
+    }
+  });

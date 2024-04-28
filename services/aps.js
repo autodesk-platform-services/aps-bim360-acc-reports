@@ -90,3 +90,7 @@ service.getItemVersions = async (projectId, itemId, accessToken) => {
     const resp = await dataManagementClient.getItemVersions(accessToken, projectId, itemId);
     return resp.data;
 };
+
+service.getClientId = () => {
+    return APS_CLIENT_ID;
+};
