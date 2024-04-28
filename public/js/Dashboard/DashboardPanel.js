@@ -74,8 +74,9 @@ class DashboardPanelChart extends DashboardPanel {
 
 // Model data in format for charts
 class ModelData {
-    constructor(viewer) {
+    constructor(a) {
         this._modelData = {};
+        this.viewer = a._viewer;
     }
 
     init(callback) {
@@ -86,7 +87,7 @@ class ModelData {
         var tree = _this.getAllLeafComponents(function (dbIds) {
             var count = dbIds.length;
             dbIds.forEach(function (dbId) {
-                viewer.getProperties(dbId, function (props) {
+                _this.viewer.getProperties(dbId, function (props) {
                     props.properties.forEach(function (prop) {
                         if (!isNaN(prop.displayValue)) return; // let's not categorize properties that store numbers
 
@@ -101,7 +102,7 @@ class ModelData {
                         _this._modelData[prop.displayName][prop.displayValue].push(dbId);
                     })
 
-                    viewer.getObjectTree(function (tree) {
+                    _this.viewer.getObjectTree(function (tree) {
                         // for revit models
                         var typeId = tree.getNodeParentId(props.dbId);
                         var familyId = tree.getNodeParentId(typeId);
@@ -121,7 +122,7 @@ class ModelData {
 
     getAllLeafComponents(callback) {
         // from https://learnforge.autodesk.io/#/viewer/extensions/panel?id=enumerate-leaf-nodes
-        viewer.getObjectTree(function (tree) {
+        this.viewer.getObjectTree(function (tree) {
             var leaves = [];
             tree.enumNodeChildren(tree.getRootId(), function (dbId) {
                 if (tree.getChildCount(dbId) === 0) {

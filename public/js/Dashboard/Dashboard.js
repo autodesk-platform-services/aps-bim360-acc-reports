@@ -16,18 +16,18 @@
 // UNINTERRUPTED OR ERROR FREE.
 /////////////////////////////////////////////////////////////////////
 
-$(document).ready(function () {
-    $(document).on('DOMNodeInserted', function (e) {
-        if ($(e.target).hasClass('orbit-gizmo')) {
-            // here, viewer represents the variable defined at viewer initialization
-            if (viewer === null || viewer === undefined) return;
-            new Dashboard(viewer, [
-                new BarChart('Type Name'),
-                new PieChart('Family Name')
-            ])
-        }
-    });
-})
+// $(document).ready(function () {
+//     $(document).on('DOMNodeInserted', function (e) {
+//         if ($(e.target).hasClass('orbit-gizmo')) {
+//             // here, viewer represents the variable defined at viewer initialization
+//             if (viewer === null || viewer === undefined) return;
+//             new Dashboard(viewer, [
+//                 new BarChart('Type Name'),
+//                 new PieChart('Family Name')
+//             ])
+//         }
+//     });
+// })
 
 // Handles the Dashboard panels
 class Dashboard {
@@ -61,7 +61,7 @@ class Dashboard {
             $('#dashboard').empty();
             _this._panels.forEach(function (panel) {
                 // let's create a DIV with the Panel Function name and load it
-                panel.load('dashboard', viewer, data);
+                panel.load('dashboard', _this._viewer, data);
             });
         });
     }

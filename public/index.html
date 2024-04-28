@@ -2,10 +2,9 @@
 <html>
 
 <head>
-  <title> Visual Reports Sample - Autodesk Forge</title>
+  <title> Visual Reports Sample - Autodesk Platform Services</title>
   <meta charset="utf-8" />
-  <link rel="shortcut icon"
-    href="https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/raw/master/img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://cdn.autodesk.io/favicon.ico">
   <!-- Common packages: jQuery, Bootstrap, jsTree -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -15,14 +14,15 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/themes/default/style.min.css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-light.min.css">
   <!-- Autodesk Forge Viewer files -->
   <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
     type="text/css">
   <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
   <!-- this project files -->
   <link href="css/main.css" rel="stylesheet" />
-  <script src="js/ForgeTree.js"></script>
-  <script src="js/ForgeViewer.js"></script>
+  <!-- <script src="js/ForgeTree.js"></script>
+  <script src="js/ForgeViewer.js"></script> -->
   <!-- dashboard files -->
   <script src="js/Dashboard/Dashboard.js"></script>
   <script src="js/Dashboard/DashboardPanel.js"></script>
@@ -37,22 +37,27 @@
   <!-- Fixed navbar by Bootstrap: https://getbootstrap.com/examples/navbar-fixed-top/ -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
-      <div style="float: left; margin-top: 5px;">
-
-        <img alt="Forge" src="/img/forge.png" height="40"> Visual Reports
+      <div style="float: left; margin-top: 9px;">
+        <img src="https://cdn.autodesk.io/logo/black/stacked.png" alt="Autodesk Platform Services" height="40"> 
+        <span class="poc_header"> Visual Reports </span>
       </div>
       </ul>
-      <div style="float: right; margin-top: 15px;">
-        <span style="padding-right: 5px; cursor: pointer;" data-toggle="modal" data-target="#provisionAccountModal"
+      <div style="float: right; margin-top: 11px;">
+        <button class="btn btn-lg btn-default" id="autodeskSigninButton">
+          <img
+            src="https://cdn.autodesk.io/autodesk.png"
+            height="20"> Sign in
+        </button>
+        <!-- <span style="padding-right: 5px; cursor: pointer;" data-toggle="modal" data-target="#provisionAccountModal"
           title="Enable my BIM 360 or ACC Account"><span class="glyphicon glyphicon-cog glyphiconTop mlink"> </span> Enable my
-          BIM 360 or ACC Account</span>
+          BIM 360 or ACC Account</span> -->
       </div>
     </div>
   </nav>
   <!-- End of navbar -->
   <div class="container-fluid fill">
     <div class="row fill">
-      <div class="col-sm-4 fill">
+      <div class="col-sm-3 fill">
         <div class="panel panel-default fill">
           <div class="panel-heading" data-toggle="tooltip" style="padding: 0px;">
             <span id="userInfo"></span>
@@ -61,23 +66,20 @@
             <span id="signOut" class="glyphicon glyphicon-log-out"
               style="margin-top:5px;cursor: pointer; float: right; display: none" title="Sign out"> </span>
           </div>
-          <div id="userHubs">
-            <div style="padding-top: 100px; text-align: center;">
-              <button class="btn btn-lg btn-default" id="autodeskSigninButton">
-                <img
-                  src="https://github.com/Autodesk-Forge/bim360appstore-data.management-nodejs-transfer.storage/raw/master/www/img/autodesk_text.png"
-                  height="20"> Sign in
-              </button>
+          <div id="sidebar">
+            <div id="tree"></div>
+            <!-- <div style="padding-top: 100px; text-align: center;">
+              
               <br />
               <br />
               <br /> You may also need to provision your<br /> BIM 360 Docs account for this app.<br />
               <a href="https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps">Learn more</a>.
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
-      <div class="col-sm-8 fill">
-        <div id="forgeViewer"></div>
+      <div class="col-sm-9 fill">
+        <div id="apsViewer"></div>
       </div>
     </div>
   </div>
@@ -179,6 +181,10 @@
       </div>
     </div>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://unpkg.com/inspire-tree@4.3.1/dist/inspire-tree.js"></script>
+    <script src="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-dom.min.js"></script>
+    <script src="js/main.js" type="module"></script>
   <script>
     new Clipboard('.input-group-addon');
   </script>
