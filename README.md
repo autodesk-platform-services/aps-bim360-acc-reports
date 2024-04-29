@@ -21,7 +21,7 @@ This sample is based on the [APS tutorials](https://tutorials.autodesk.io/tutori
 
 ## Live version
 
-[https://visualreports.autodesk.io](https://visualreports.autodesk.io/)
+[https://visual-reports.autodesk.io](https://visual-reports.autodesk.io/)
 
 
 # Setup
@@ -50,6 +50,7 @@ Mac OSX/Linux (Terminal)
     export APS_CLIENT_ID=<<YOUR CLIENT ID FROM APS DEVELOPER PORTAL>>
     export APS_CLIENT_SECRET=<<YOUR APS CLIENT SECRET>>
     export APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM APS DEVELOPER PORTAL>>
+    export SERVER_SESSION_SECRET=<<secret-phrase>> # phrase used to encrypt/decrypt server session cookies
     npm run dev
 
 Windows (use <b>Node.js command line</b> from Start menu)
@@ -58,6 +59,7 @@ Windows (use <b>Node.js command line</b> from Start menu)
     set APS_CLIENT_ID=<<YOUR CLIENT ID FROM APS DEVELOPER PORTAL>>
     set APS_CLIENT_SECRET=<<YOUR APS CLIENT SECRET>>
     set APS_CALLBACK_URL=<<YOUR CALLBACK URL FROM APS DEVELOPER PORTAL>>
+    set SERVER_SESSION_SECRET=<<secret-phrase>> # phrase used to encrypt/decrypt server session cookies
     npm run dev
 
 Open the browser: [http://localhost:3000](http://localhost:3000).
