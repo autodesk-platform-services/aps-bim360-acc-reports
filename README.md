@@ -14,10 +14,10 @@
 
 # Description
 
-This sample application demonstrates how to extract models properties of Autodesk360/BIM360/Autodesk Construction Cloud (ACC) and generate a project dashboard. Also shows a nested view with 2d views of the model (if available).
+This sample application demonstrates how to extract models properties of Autodesk360/BIM360/Autodesk Forma and generate a project dashboard. Also shows a nested view with 2d views of the model (if available).
 
 
-This sample is based on the [APS tutorials](https://tutorials.autodesk.io/tutorials/hubs-browser/) in the section *Hubs Browser* and *Dashboard*. The original implementation was based on [Jim Awe - LMVNavTest](https://github.com/JimAwe/LmvNavTest) (Deprecated).
+This sample is based on the [APS tutorials](https://tutorials.autodesk.io/tutorials/hubs-browser) in the section *Hubs Browser* and *Dashboard*. The original implementation was based on [Jim Awe - LMVNavTest](https://github.com/JimAwe/LmvNavTest) (Deprecated).
 
 ## Live version
 
@@ -28,7 +28,7 @@ This sample is based on the [APS tutorials](https://tutorials.autodesk.io/tutori
 
 ## Prerequisites
 
-1. **BIM 360 or ACC Account**: must be Account Admin to add the app integration. [Learn about provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products).
+1. **BIM 360 or Autodesk Forma Account**: must be Hub Admin to add the app integration. [Learn about provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products).
 2. **APS Account**: Learn how to create a APS Account, activate subscription and create an app at [this tutorial](https://tutorials.autodesk.io/#create-an-account). 
 3. **Visual Code** or any other text-based tool.
 4. **JavaScript** basic knowledge with **jQuery**.
@@ -87,24 +87,24 @@ Which executes **nodemon ./start.js**.  The flag option **--ignore www/** indica
 
 Documentation:
 
-- [BIM 360 or ACC API Provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products)
+- [BIM 360 or Forma API Provisioning](https://tutorials.autodesk.io/#provision-access-in-other-products)
 - [Data Management API](https://developer.autodesk.com/en/docs/data/v2/overview/)
 - [Viewer](https://developer.autodesk.com/en/docs/viewer/v7)
 
 Tutorials:
 
-- [View BIM 360 or ACC Models](https://tutorials.autodesk.io/tutorials/hubs-browser/)
+- [View BIM 360 or Forma Models](https://tutorials.autodesk.io/tutorials/hubs-browser/)
 
 Blogs:
 
 - [APS Blog](https://aps.autodesk.com/categories/bim-360-api)
 - [Field of View](https://fieldofviewblog.wordpress.com/), a BIM focused blog
-- [Autodesk Construction Cloud Unified Products: Does it Affect My Application?](https://aps.autodesk.com/blog/autodesk-construction-cloud-unified-products-does-it-affect-my-application)
-- [Autodesk Build and Other Autodesk Construction Cloud Unified Products Launch](https://aps.autodesk.com/blog/autodesk-build-and-other-autodesk-construction-cloud-unified-products-launch)
+- [Autodesk Forma Unified Products: Does it Affect My Application?](https://aps.autodesk.com/blog/autodesk-construction-cloud-unified-products-does-it-affect-my-application)
+- [Autodesk Build and Other Autodesk Forma Unified Products Launch](https://aps.autodesk.com/blog/autodesk-build-and-other-autodesk-construction-cloud-unified-products-launch)
 
 ## Troubleshooting
 
-1. **Cannot see my BIM 360 or ACC projects**: Make sure to provision the APS App Client ID within the BIM 360 or ACC Account, [learn more here](https://tutorials.autodesk.io/#provision-access-in-other-products). This requires the Account Admin permission.
+1. **Cannot see my BIM 360 or Forma projects**: Make sure to provision the APS App Client ID within the BIM 360 or ACC Account, [learn more here](https://tutorials.autodesk.io/#provision-access-in-other-products). This requires the Account Admin permission.
 
 2. **Cannot load Autodesk360 model**: In Autodesk360, the model is not translated by default until the end user loads the model one time in Autodesk360, or the developer posts job to translate. 
 
